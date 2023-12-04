@@ -4,4 +4,4 @@
 ## Table of contents:
 | Project/Read Me | Description | Source Code|
 | --- | --- | --- |
-| :ballot_box_with_check: [**Calculator_Console_App**](https://github.com/DelyanNikolov/Small_Projects/blob/main/Calculator_Console_App/ReadMe.md) | simple math operaton console calculator |[*Code link*](https://github.com/DelyanNikolov/Small_Projects/blob/main/Calculator_Console_App/calculator.py)| |
+| :white_check_mark: [**Calculator_Console_App**](https://github.com/DelyanNikolov/Small_Projects/blob/main/Calculator_Console_App/ReadMe.md) | simple math operaton console calculator |[*Code link*](https://github.com/DelyanNikolov/Small_Projects/blob/main/Calculator_Console_App/calculator.py)| |
