@@ -1,5 +1,6 @@
 import datetime as dt
 import random
+import smtplib
 
 weekdays = {
     0: "Monday",
@@ -12,16 +13,29 @@ weekdays = {
 }
 
 
-def get_current_day_of_week():
-    global current_day_of_week
+def current_day_of_week():
     current_date = dt.datetime.now()
     return weekdays[current_date.weekday()]
 
 
-current_day_of_week = get_current_day_of_week()
+def random_quote():
+    return random.choice(quotes)
+
+
 with open("quotes.txt", "r") as data:
     quotes = [line.strip() for line in data]
 
-random_quote = random.choice(quotes)
-print(random_quote)
-print(current_day_of_week)
+quote = random_quote()
+current_day_of_week = current_day_of_week()
+
+my_email = "dido@gmail.com"
+password = "asdfgh"
+
+with smtplib.SMTP("smtp.gmail.com") as connection:
+    connection.starttls()
+    connection.login(user=my_email, password=password)
+    connection.sendmail(
+        from_addr=my_email,
+        to_addrs="delian5@abv.bg",
+        msg=f"Subject:Motivational quote\n\n Quote for {current_day_of_week}:\n{quote}"
+    )
